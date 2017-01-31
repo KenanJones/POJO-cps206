@@ -1,5 +1,5 @@
 # POJO-cps206
-Plain Old Java Objects - Bicycle.
+Plain Old Java Object - Bicycle.
 ###contains subclasses:
 Color, Wheel, Frame, GearSet
 ####subsubclasses:
