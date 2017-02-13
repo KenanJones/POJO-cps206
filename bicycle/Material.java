@@ -1,11 +1,15 @@
+package bicycle;
+
 public class Material{
 
-   private double density;
-   private double strength;
-   private String name;
+   private final double density;
+   private final double strength;
+   private final String name;
 
-   public static void main(String... args){
-
+   public Material(String name, double density, double strength){
+      this.name = name;
+      this.density = density;
+      this.strength = strength;
    }
 
    public double getDensity(){
@@ -18,17 +22,5 @@ public class Material{
 
    public String getName(){
       return name;
-   }
-   
-   public void setDensity(double density){
-      this.density = density;
-   }
-   
-   public void setStrength(double strength){
-      this.strength = strength;
-   }
-   
-   public void setName(String name){
-      this.name = name;
    }
 }

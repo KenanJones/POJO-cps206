@@ -1,11 +1,15 @@
+package bicycle;
+
 public class Gear{
 
-   private int numberOfTeeth;
-   private double diameter;
-   private double weight;
+   private final int numberOfTeeth;
+   private final double diameter;
+   private final double weight;
 
-   public static void main(String... args){
-
+   public Gear(int numberOfTeeth, double diameter, double weight){
+      this.numberOfTeeth = numberOfTeeth;
+      this.diameter = diameter;
+      this.weight = weight;
    }
 
    public int getNumberOfTeeth(){
@@ -18,17 +22,5 @@ public class Gear{
 
    public double getWeight(){
       return weight;
-   }
-   
-   public void setNumberOfTeeth(int num){
-      numberOfTeeth = num;
-   }
-   
-   public void setDiameter(double diameter){
-      this.diameter = diameter;
-   }
-   
-   public void setWeight(double weight){
-      this.weight = weight;
    }
 }

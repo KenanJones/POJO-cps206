@@ -1,8 +1,10 @@
+package bicycle;
+
 import java.util.*;
 
 public class GearSet{
 
-   private int numberOfGears;
+   //private int numberOfGears; //this is just the size of the arraylist
    private ArrayList<Gear> gears;
    private double weight;
    private String brand;
@@ -12,7 +14,7 @@ public class GearSet{
    }
 
    public int getNumberOfGears(){
-      return numberOfGears;
+      return gears.size();
    }
 
    public double getWeight(){
@@ -26,11 +28,7 @@ public class GearSet{
    public ArrayList<Gear> getGears(){
       return gears;
    }
-   
-   public void setNumberOfGears(int num){
-      numberOfGears = num;
-   }
-   
+      
    public void setWeight(double weight){
       this.weight = weight;
    }

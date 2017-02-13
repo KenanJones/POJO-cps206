@@ -1,3 +1,5 @@
+package bicycle;
+
 public class Bicycle{
    
    private double cost;
@@ -7,6 +9,18 @@ public class Bicycle{
    private String brand;
    private GearSet frontGears;
    private GearSet backGears;
+   
+   public Bicycle(){}//a default constructor
+   
+   public Bicycle(double cost, String brand, Color color, Wheel wheel, Frame frame, GearSet frontGears, GearSet backGears){
+      this.color = color;
+      this.cost = cost;
+      this.wheel = wheel;
+      this.frame = frame;
+      this.brand = brand;
+      this.frontGears = frontGears;
+      this.backGears = backGears;
+   }
    
    public static void main (String... args){
       new Bicycle();

@@ -1,25 +1,38 @@
+package bicycle;
+
 public class Color{
 
-   private double intensity;
-   private String name;
+   private int red;
+   private int green;
+   private int blue;
 
-   public static void main(String... args){
-
+   public Color(int red, int green, int blue){
+      this.red = red;
+      this.green = green;
+      this.blue = blue;
    }
 
-   public double getIntensity(){
-      return intensity;
+   public int getRed(){
+      return red;
    }
 
-   public String getName(){
-      return name;
+   public int getGreen(){
+      return green;
    }
    
-   public void setIntensity(double Intensity){
-      this.intensity = intensity;
+   public int getBlue(){
+      return blue;
    }
    
-   public void setName(String name){
-      this.name = name;
+   public void setRed(int red){
+      this.red = red;
+   }
+   
+   public void setGreen(int green){
+      this.green = green;
+   }
+   
+   public void setBlue(int blue){
+      this.blue = blue;
    }
 }

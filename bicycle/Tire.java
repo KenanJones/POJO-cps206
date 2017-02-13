@@ -1,12 +1,17 @@
+package bicycle;
+
 public class Tire{
 
-   private double thickness;
-   private double width;
-   private double diameter;
-   private String brand;
+   private final double thickness;
+   private final double width;
+   private final double size;
+   private final String brand;
 
-   public static void main(String... args){
-
+   public Tire(double thickness, double width, double size, String brand){
+      this.thickness = thickness;
+      this.width = width;
+      this.size = size;
+      this.brand = brand;
    }
 
    public double getThickness(){
@@ -17,27 +22,11 @@ public class Tire{
       return width;
    }
 
-   public double getDiameter(){
-      return diameter;
+   public double getSize(){
+      return size;
    }
 
    public String getBrand(){
       return brand;
-   }
-   
-   public void setBrand(String brand){
-      this.brand = brand;
-   }
-   
-   public void setDiameter(double diameter){
-      this.diameter = diameter;
-   }
-   
-   public void setWidth(double width){
-      this.width = width;
-   }
-   
-   public void setThickness(double thickness){
-      this.thickness = thickness;
    }
 }

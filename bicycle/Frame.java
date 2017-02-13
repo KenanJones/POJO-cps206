@@ -1,13 +1,19 @@
+package bicycle;
+
 public class Frame{
 
-   private double length;
-   private double height;
-   private Material material;
-   private double weight;
-   private String brand;
-
-   public static void main(String... args){
-
+   private final double length;
+   private final double height;
+   private final Material material;
+   private final double weight;
+   private final String brand;
+   
+   public Frame(double length, double height, double weight, String brand, Material material){
+      this.length = length;
+      this.height = height;
+      this.weight = weight;
+      this.brand = brand;
+      this.material = material;
    }
 
    public double getLength(){
@@ -28,25 +34,5 @@ public class Frame{
 
    public Material getMaterial(){
       return material;
-   }
-   
-   public void setLength(double length){
-      this.length = length;
-   }
-   
-   public void setWeight(double weight){
-      this.weight = weight;
-   }
-   
-   public void setHeight(double height){
-      this.height = height;
-   }
-   
-   public void setBrand(String brand){
-      this.brand = brand;
-   }
-   
-   public void setMaterial(Material material){
-      this.material = material;
    }
 }
