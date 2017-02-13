@@ -3,17 +3,15 @@ package bicycle;
 public class Bicycle{
    
    private double cost;
-   private Color color;
    private Wheel wheel;
-   private Frame frame;
+   private BikeFrame frame;
    private String brand;
    private GearSet frontGears;
    private GearSet backGears;
    
-   public Bicycle(){}//a default constructor
+   public Bicycle(){}
    
-   public Bicycle(double cost, String brand, Color color, Wheel wheel, Frame frame, GearSet frontGears, GearSet backGears){
-      this.color = color;
+   public Bicycle(double cost, String brand, Wheel wheel, BikeFrame frame, GearSet frontGears, GearSet backGears){
       this.cost = cost;
       this.wheel = wheel;
       this.frame = frame;
@@ -22,19 +20,11 @@ public class Bicycle{
       this.backGears = backGears;
    }
    
-   public static void main (String... args){
-      new Bicycle();
-   }
-   
-    public Color getColor(){
-      return color;
-   }
-   
     public Wheel getWheel(){
       return wheel;
    }
    
-    public Frame getFrame(){
+    public BikeFrame getFrame(){
       return frame;
    }
    
@@ -57,16 +47,12 @@ public class Bicycle{
    public void setCost(double cost){
       this.cost = cost;
    }
-   
-   public void setColor(Color color){
-      this.color = color;
-   }
-   
+
    public void setWheel(Wheel wheel){
       this.wheel = wheel;
    }
    
-   public void setFrame(Frame frame){
+   public void setFrame(BikeFrame frame){
       this.frame = frame;
    }
    

@@ -2,37 +2,37 @@ package bicycle;
 
 public class Color{
 
-   private int red;
-   private int green;
-   private int blue;
+   private byte red;
+   private byte green;
+   private byte blue;
 
    public Color(int red, int green, int blue){
-      this.red = red;
-      this.green = green;
-      this.blue = blue;
+      this.red = (byte)red;
+      this.green = (byte)green;
+      this.blue = (byte)blue;
    }
 
-   public int getRed(){
+   public byte getRed(){
       return red;
    }
 
-   public int getGreen(){
+   public byte getGreen(){
       return green;
    }
    
-   public int getBlue(){
+   public byte getBlue(){
       return blue;
    }
    
-   public void setRed(int red){
+   public void setRed(byte red){
       this.red = red;
    }
    
-   public void setGreen(int green){
+   public void setGreen(byte green){
       this.green = green;
    }
    
-   public void setBlue(int blue){
+   public void setBlue(byte blue){
       this.blue = blue;
    }
 }
