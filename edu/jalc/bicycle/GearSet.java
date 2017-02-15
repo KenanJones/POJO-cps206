@@ -1,12 +1,21 @@
 package bicycle;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class GearSet{
 
    private ArrayList<Gear> gears;
    private double weight;
-
+   
+   public GearSet(){}
+   
+   public GearSet(double weight, Gear... gears){
+      this. weight = weight;
+      this.gears = new ArrayList<>();
+      for(Gear gear: gears){
+         this.gears.add(gear);
+      }
+   }
    public int getNumberOfGears(){
       return gears.size();
    }
