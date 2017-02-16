@@ -18,7 +18,7 @@ public class Tire{
       return thickness;
    }
 
-   public double getwidth(){
+   public double getWidth(){
       return width;
    }
 
