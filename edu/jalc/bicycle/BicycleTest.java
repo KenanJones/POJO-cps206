@@ -1,4 +1,8 @@
-package bicycle;
+package edu.jalc.bicycle;
+
+import edu.jalc.bicycle.frame.BikeFrame;
+import edu.jalc.bicycle.wheel.Wheel;
+import edu.jalc.bicycle.gear.GearSet;
 
 class BicycleTest{
    public static void main(String... args){
