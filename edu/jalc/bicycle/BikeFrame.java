@@ -1,17 +1,19 @@
 package bicycle;
 
-public class Frame{
+public class BikeFrame{
 
    private final double length;
    private final double height;
-   private final Material material;
    private final double weight;
+   private Color color;
    private final String brand;
+   private final Material material;
    
-   public Frame(double length, double height, double weight, String brand, Material material){
+   public BikeFrame(double length, double height, double weight, Color color, String brand, Material material){
       this.length = length;
       this.height = height;
       this.weight = weight;
+      this.color = color;
       this.brand = brand;
       this.material = material;
    }
@@ -28,11 +30,19 @@ public class Frame{
       return height;
    }
 
-   public String getbrand(){
+   public Color getColor(){
+      return color;
+   }
+   
+   public String getBrand(){
       return brand;
    }
 
    public Material getMaterial(){
       return material;
+   }
+   
+   public void setColor(Color color){
+      this.color = color;
    }
 }

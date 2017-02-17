@@ -1,11 +1,14 @@
-package bicycle;
+package edu.jalc.bicycle.frame;
+
+import edu.jalc.bicycle.material.Material;
+import edu.jalc.bicycle.color.Color;
 
 public class BikeFrame{
 
    private final double length;
    private final double height;
-   private Color color;
    private final double weight;
+   private Color color;
    private final String brand;
    private final Material material;
    
@@ -34,7 +37,7 @@ public class BikeFrame{
       return color;
    }
    
-   public String getbrand(){
+   public String getBrand(){
       return brand;
    }
 

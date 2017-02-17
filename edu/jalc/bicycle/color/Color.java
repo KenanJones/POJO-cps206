@@ -1,4 +1,4 @@
-package bicycle;
+package edu.jalc.bicycle.color;
 
 public class Color{
 
@@ -24,15 +24,15 @@ public class Color{
       return blue;
    }
    
-   public void setRed(byte red){
-      this.red = red;
+   public void setRed(int red){
+      this.red = (byte)red;
    }
    
-   public void setGreen(byte green){
-      this.green = green;
+   public void setGreen(int green){
+      this.green = (byte)green;
    }
    
-   public void setBlue(byte blue){
-      this.blue = blue;
+   public void setBlue(int blue){
+      this.blue = (byte)blue;
    }
 }
