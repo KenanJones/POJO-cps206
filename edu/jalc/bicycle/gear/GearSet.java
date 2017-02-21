@@ -1,25 +1,18 @@
 package edu.jalc.bicycle.gear;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GearSet{
 
    private ArrayList<Gear> gears;
-   private double weight;
-   
-   public GearSet(){}
-   
-   public GearSet(double weight, ArrayList<Gear> gears){
-      this. weight = weight;
-      this.gears = gears;
-   }
-   
+   private final double weight;
+
+   public GearSet(){weight = 0;}
+
    public GearSet(double weight, Gear... gears){
       this. weight = weight;
-      this.gears = new ArrayList<>();
-      for(Gear gear: gears){
-         this.gears.add(gear);
-      }
+      this.gears = new ArrayList(Arrays.asList(gears));
    }
    public int getNumberOfGears(){
       return gears.size();
@@ -30,11 +23,7 @@ public class GearSet{
    }
 
    public ArrayList<Gear> getGears(){
-      return gears;
-   }
-
-   public void setWeight(double weight){
-      this.weight = weight;
+      return (ArrayList<Gear>)gears.clone();
    }
 
    public void setGears(ArrayList<Gear> gears){
