@@ -1,6 +1,6 @@
 package edu.jalc.bicycle.tire;
 
-public class Tire{
+public class Tire implements Fillable{
 
    private final double thickness;
    private final double width;
@@ -13,6 +13,8 @@ public class Tire{
       this.size = size;
       this.brand = brand;
    }
+   
+   public void fill(){System.out.println("Tires filled.");}
 
    public double getThickness(){
       return thickness;
