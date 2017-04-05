@@ -1,6 +1,6 @@
 # bicycle
 Plain Old Java Object - Bicycle.
-###contains subclasses:
+### contains subclasses:
 Color, Wheel, Frame, GearSet
-####subsubclasses:
+#### subsubclasses:
 Tire, Material, Gear
