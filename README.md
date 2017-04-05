@@ -4,3 +4,5 @@ Plain Old Java Object - Bicycle.
 Color, Wheel, Frame, GearSet
 #### subsubclasses:
 Tire, Material, Gear
+### contains interfaces:
+Rideable, Pedalable, Brakeable, Trickable, Turnable, Fillable
