@@ -3,6 +3,8 @@ package edu.jalc.bicycle;
 import edu.jalc.bicycle.frame.BikeFrame;
 import edu.jalc.bicycle.wheel.Wheel;
 import edu.jalc.bicycle.gear.GearSet;
+import edu.jalc.bicycle.brand.Brand;
+import edu.jalc.bicycle.actions.*;
 import java.util.Random;
 
 public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turnable{
@@ -12,23 +14,23 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    private double cost;
    private Wheel wheel;
    private BikeFrame frame;
-   private String brand;
+   private Brand brand;
    private GearSet frontGears;
    private GearSet backGears;
    private String[] tricks = {"backflip","wheelie","360"};
 
-   public Bicycle(double cost, String brand, Wheel wheel,
+   public Bicycle(double cost, String brandName, Wheel wheel,
          BikeFrame frame, GearSet frontGears, GearSet backGears){
       this.cost = cost;
       this.wheel = wheel;
       this.frame = frame;
-      this.brand = brand;
+      this.brand = new Brand(brandName);
       this.frontGears = frontGears;
       this.backGears = backGears;
       this.speed = 0;
       this.direction = new Direction(0);
    }
-   
+
    public void ride(){System.out.println("Time for a bike ride!");}
    public void pedal(){System.out.println("You are going " + ++speed + " mph");}
    public void brake(){System.out.println("You are going " + --speed + " mph");}
@@ -36,14 +38,14 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
      System.out.println("Nice! you did a " + tricks[new Random().nextInt(tricks.length)]);
    }
    public void turn(double amount){
-     this.direction.change(amount);
+     this.direction.turn(amount);
      System.out.println("Your current direction is " + direction);
    }
 
    public double getSpeed(){
      return this.speed;
    }
-   
+
    public double getCost(){
      return cost;
    }
@@ -56,7 +58,7 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
       return frame;
    }
 
-    public String getBrand(){
+    public Brand getBrand(){
       return brand;
    }
 
@@ -80,8 +82,8 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
       this.frame = frame;
    }
 
-   public void setBrand(String brand){
-      this.brand = brand;
+   public void setBrand(String brandName){
+      this.brand = new Brand(brandName);
    }
 
    public void setFrontGears(GearSet gears){
@@ -91,7 +93,7 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    public void setBackGears(GearSet gears){
       backGears = gears;
    }
-   
+
    public String toString(){
      return String.format("cost: $%.2f%nbrand: %s%nwheel: %s %.0f inch%n",
          getCost(), getBrand(), getWheel().getBrand(), getWheel().getDiameter());
