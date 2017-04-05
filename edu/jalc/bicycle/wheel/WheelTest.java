@@ -2,14 +2,15 @@ package edu.jalc.bicycle.wheel;
 
 import edu.jalc.bicycle.tire.Tire;
 
-class WheelTest{
+public class WheelTest{
    public static void main(String... args){
+      System.out.println("Testing Wheel . . .");
       testGetDiameter();
       testGetWeight();
       testGetBrand();
       testGetTire();
       testSetTire();
-      System.out.println("All tests passed");
+      System.out.println("Wheel tests passed.");
    }
 
    static void testGetDiameter(){
@@ -27,7 +28,7 @@ class WheelTest{
    static void testGetBrand(){
       System.out.println("testing getBrand");
       Wheel wheel = new Wheel(0,0,"brand",null);
-      assert(wheel.getBrand().equals("brand"));
+      assert(wheel.getBrand().getBrandName().equals("brand"));
    }
 
    static void testGetTire(){
@@ -38,7 +39,7 @@ class WheelTest{
    }
 
    static void testSetTire(){
-      System.out.println("testing getTire");
+      System.out.println("testing setTire");
       Wheel wheel = new Wheel(0,0,null,null);
       Tire tire = new Tire(1,1,1,null);
       wheel.setTire(tire);

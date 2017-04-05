@@ -3,8 +3,9 @@ package edu.jalc.bicycle.frame;
 import edu.jalc.bicycle.material.Material;
 import edu.jalc.bicycle.color.Color;
 
-class BikeFrameTest{
+public class BikeFrameTest{
    public static void main(String... args){
+      System.out.println("Testing BikeFrame . . .");
       testGetLength();
       testGetHeight();
       testGetWeight();
@@ -12,7 +13,7 @@ class BikeFrameTest{
       testGetColor();
       testGetMaterial();
       testSetColor();
-      System.out.println("All tests passed");
+      System.out.println("BikeFrame tests passed.");
    }
 
    static void testGetLength(){
@@ -36,7 +37,7 @@ class BikeFrameTest{
    static void testGetBrand(){
       System.out.println("testing getBrand");
       BikeFrame frame = new BikeFrame(0,0,0,null,"Brand",null);
-      assert(frame.getBrand().equals("Brand"));
+      assert(frame.getBrand().getBrandName().equals("Brand"));
    }
 
    static void testGetColor(){

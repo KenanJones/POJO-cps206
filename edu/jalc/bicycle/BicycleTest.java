@@ -4,8 +4,9 @@ import edu.jalc.bicycle.frame.BikeFrame;
 import edu.jalc.bicycle.wheel.Wheel;
 import edu.jalc.bicycle.gear.GearSet;
 
-class BicycleTest{
+public class BicycleTest{
    public static void main(String... args){
+      System.out.println("Testing Bicycle . . .");
       testGetCost();
       testGetWheel();
       testGetFrame();
@@ -15,10 +16,12 @@ class BicycleTest{
       testSetCost();
       testSetWheel();
       testSetFrame();
-      testSetBrand();
       testSetFrontGears();
       testSetBackGears();
-      System.out.println("All tests passed");
+      //testPedal();
+      //testBrake();
+      //testTurn();
+      System.out.println("Bicycle tests passed.");
    }
 
    static void testGetCost(){
@@ -44,7 +47,7 @@ class BicycleTest{
    static void testGetBrand(){
       System.out.println("testing getBrand");
       Bicycle bicycle = new Bicycle(0,"My Brand",null,null,null,null);
-      assert(bicycle.getBrand().equals("My Brand"));
+      assert(bicycle.getBrand().getBrandName().equals("My Brand"));
    }
 
    static void testGetFrontGears(){
@@ -84,13 +87,6 @@ class BicycleTest{
       assert(bicycle.getFrame() == frame);
    }
 
-   static void testSetBrand(){
-      System.out.println("testing setBrand");
-      Bicycle bicycle = new Bicycle(0,null,null,null,null,null);
-      bicycle.setBrand("My Brand");
-      assert(bicycle.getBrand().equals("My Brand"));
-   }
-
    static void testSetFrontGears(){
       System.out.println("testing setFrontGears");
       GearSet gears = new GearSet();
@@ -105,5 +101,40 @@ class BicycleTest{
       Bicycle bicycle = new Bicycle(150.0,null,null,null,null,null);
       bicycle.setBackGears(gears);
       assert(bicycle.getBackGears() == gears);
+   }
+   
+   static void testPedal(){
+     System.out.println("testing pedal");
+     Bicycle bike = new Bicycle(0,null,null,null,null,null);
+     assert(bike.getSpeed() == 0);
+     bike.pedal();
+     assert(bike.getSpeed() == 1);
+     bike.pedal();
+     assert(bike.getSpeed() == 2);
+   }
+   static void testBrake(){
+     System.out.println("testing brake");
+     Bicycle bike = new Bicycle(0,null,null,null,null,null);
+     assert(bike.getSpeed() == 0);
+     bike.pedal();
+     bike.pedal();
+     bike.brake();
+     assert(bike.getSpeed() == 1);
+     bike.brake();
+     assert(bike.getSpeed() == 0);
+   }
+   static void testTurn(){
+     System.out.println("testing turn");
+     Bicycle bike = new Bicycle(0,null,null,null,null,null);
+     bike.turn(100);
+     assert (bike.getDirection().get() == 100);
+     bike.turn(150);
+     assert (bike.getDirection().get() == 250);
+     bike.turn(120);
+     assert (bike.getDirection().get() == 10);
+     bike.turn(-100);
+     assert (bike.getDirection().get() == 270);
+     bike.turn(-500);
+     assert (bike.getDirection().get() == 130);
    }
 }

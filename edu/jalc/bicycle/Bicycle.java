@@ -14,7 +14,7 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    private double cost;
    private Wheel wheel;
    private BikeFrame frame;
-   private Brand brand;
+   private final Brand brand;
    private GearSet frontGears;
    private GearSet backGears;
    private String[] tricks = {"backflip","wheelie","360"};
@@ -33,17 +33,24 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
 
    public void ride(){System.out.println("Time for a bike ride!");}
    public void pedal(){System.out.println("You are going " + ++speed + " mph");}
-   public void brake(){System.out.println("You are going " + --speed + " mph");}
-   public void doTrick(){
-     System.out.println("Nice! you did a " + tricks[new Random().nextInt(tricks.length)]);
+   public void brake(){
+     if(speed > 0) speed--;
+     System.out.println("You are going " + speed + " mph");
    }
-   public void turn(double amount){
-     this.direction.turn(amount);
+   public void doTrick(){
+     System.out.println("Nice! you did a " + tricks[new Random().nextInt(tricks.length)] +"!");
+   }
+   public void turn(double degrees){
+     this.direction.rotate(degrees);
      System.out.println("Your current direction is " + direction);
    }
 
    public double getSpeed(){
      return this.speed;
+   }
+   
+   public Direction getDirection(){
+     return this.direction;
    }
 
    public double getCost(){
@@ -82,10 +89,6 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
       this.frame = frame;
    }
 
-   public void setBrand(String brandName){
-      this.brand = new Brand(brandName);
-   }
-
    public void setFrontGears(GearSet gears){
       frontGears = gears;
    }
@@ -95,7 +98,6 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    }
 
    public String toString(){
-     return String.format("cost: $%.2f%nbrand: %s%nwheel: %s %.0f inch%n",
-         getCost(), getBrand(), getWheel().getBrand(), getWheel().getDiameter());
+     return String.format("$%.2f %s %.0f inch", getCost(), getBrand(),getWheel().getDiameter());
    }
 }

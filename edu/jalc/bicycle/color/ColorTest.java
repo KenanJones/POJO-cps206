@@ -1,11 +1,12 @@
 package edu.jalc.bicycle.color;
 
-class ColorTest{
+public class ColorTest{
    public static void main(String... args){
+      System.out.println("Testing Color . . .");
       testGetRed();
       testGetGreen();
       testGetBlue();
-      System.out.println("All tests passed");
+      System.out.println("Color tests passed.");
    }
 
    static void testGetRed(){

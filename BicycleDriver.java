@@ -12,8 +12,6 @@ public class BicycleDriver{
       Wheel wheel = new Wheel(27,33,"Giant",new Tire(1.5,1.5,27,"Michellin"));
       BikeFrame frame = new BikeFrame(66,37,17,color, "Giant",new Material("steel",13,129));
       Bicycle bi = new Bicycle(127.00, "Schwinn" ,wheel, frame, new GearSet(), new GearSet());
-      /*System.out.printf("cost: $%.2f%nbrand: %s%nwheel: %s %.0f inch%n",
-         bi.getCost(), bi.getBrand(), bi.getWheel().getBrand(), bi.getWheel().getDiameter());*/
       System.out.println(bi);
       bi.ride();
       bi.pedal();

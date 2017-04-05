@@ -3,12 +3,13 @@ package edu.jalc.bicycle.gear;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-class GearSetTest{
+public class GearSetTest{
    public static void main(String... args){
+      System.out.println("Testing GearSet . . .");
       testGetWeight();
       testGetGears();
       testsetGears();
-      System.out.println("All tests passed");
+      System.out.println("GearSet tests passed.");
    }
 
    static void testGetWeight(){

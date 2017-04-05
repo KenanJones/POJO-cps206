@@ -1,18 +1,19 @@
 package edu.jalc.bicycle.wheel;
 
 import edu.jalc.bicycle.tire.Tire;
+import edu.jalc.bicycle.brand.Brand;
 
 public class Wheel{
 
    private final double diameter;
    private Tire tire;
    private final double weight;
-   private final String brand;
+   private final Brand brand;
 
-   public Wheel(double diameter, double weight, String brand, Tire tire){
+   public Wheel(double diameter, double weight, String brandName, Tire tire){
       this.diameter = diameter;
       this.weight = weight;
-      this.brand = brand;
+      this.brand = new Brand(brandName);
       this.tire = tire;
    }
 
@@ -24,7 +25,7 @@ public class Wheel{
       return weight;
    }
 
-   public String getBrand(){
+   public Brand getBrand(){
       return brand;
    }
 

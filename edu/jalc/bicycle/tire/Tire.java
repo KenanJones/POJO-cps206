@@ -1,17 +1,19 @@
 package edu.jalc.bicycle.tire;
 
+import edu.jalc.bicycle.brand.Brand;
+
 public class Tire implements Fillable{
 
    private final double thickness;
    private final double width;
    private final double size;
-   private final String brand;
+   private final Brand brand;
 
-   public Tire(double thickness, double width, double size, String brand){
+   public Tire(double thickness, double width, double size, String brandName){
       this.thickness = thickness;
       this.width = width;
       this.size = size;
-      this.brand = brand;
+      this.brand = new Brand(brandName);
    }
    
    public void fill(){System.out.println("Tires filled.");}
@@ -28,7 +30,7 @@ public class Tire implements Fillable{
       return size;
    }
 
-   public String getBrand(){
+   public Brand getBrand(){
       return brand;
    }
 }

@@ -1,11 +1,12 @@
 package edu.jalc.bicycle.material;
 
-class MaterialTest{
+public class MaterialTest{
    public static void main(String... args){
+      System.out.println("Testing Material . . .");
       testGetDensity();
       testGetStrength();
       testGetName();
-      System.out.println("All tests passed");
+      System.out.println("Material tests passed.");
    }
 
    static void testGetDensity(){

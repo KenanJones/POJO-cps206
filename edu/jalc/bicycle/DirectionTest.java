@@ -2,16 +2,18 @@ package edu.jalc.bicycle;
 
 public class DirectionTest{
   public static void main(String... args){
+    System.out.println("Testing Direction . . .");
     Direction direction = new Direction(0);
-    direction.turn(100);
+    direction.rotate(100);
     assert (direction.get() == 100);
-    direction.turn(150);
+    direction.rotate(150);
     assert (direction.get() == 250);
-    direction.turn(120);
+    direction.rotate(120);
     assert (direction.get() == 10);
-    direction.turn(-100);
+    direction.rotate(-100);
     assert (direction.get() == 270);
-    direction.turn(-500);
+    direction.rotate(-500);
     assert (direction.get() == 130);
+    System.out.println("Direction tests passed.");
   }
 }

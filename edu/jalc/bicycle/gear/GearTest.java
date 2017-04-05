@@ -1,11 +1,12 @@
 package edu.jalc.bicycle.gear;
 
-class GearTest{
+public class GearTest{
    public static void main(String... args){
+      System.out.println("Testing Gear . . .");
       testGetNumberOfTeeth();
       testGetDiameter();
       testGetWeight();
-      System.out.println("All tests passed");
+      System.out.println("Gear tests passed.");
    }
 
    static void testGetNumberOfTeeth(){

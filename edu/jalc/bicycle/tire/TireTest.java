@@ -1,12 +1,13 @@
 package edu.jalc.bicycle.tire;
 
-class TireTest{
+public class TireTest{
    public static void main(String... args){
+      System.out.println("Testing Tire . . .");
       testGetThickness();
       testGetWidth();
       testGetSize();
       testGetBrand();
-      System.out.println("All tests passed");
+      System.out.println("Tire tests passed.");
    }
 
    static void testGetThickness(){
@@ -30,6 +31,6 @@ class TireTest{
    static void testGetBrand(){
       System.out.println("testing getBrand");
       Tire tire = new Tire(0,0,0,"test string");
-      assert(tire.getBrand() == "test string");
+      assert(tire.getBrand().getBrandName() == "test string");
    }
 }
