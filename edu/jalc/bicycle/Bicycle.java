@@ -48,7 +48,7 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    public double getSpeed(){
      return this.speed;
    }
-   
+
    public Direction getDirection(){
      return this.direction;
    }
@@ -98,6 +98,9 @@ public class Bicycle implements Rideable, Pedalable, Brakeable, Trickable, Turna
    }
 
    public String toString(){
-     return String.format("$%.2f %s %.0f inch", getCost(), getBrand(),getWheel().getDiameter());
+     return String.format("$%.2f %s %.0f inch", getCost(), getBrand(), getWheel().getDiameter());
+   }
+   public String describe(){
+     return this.toString() + String.format(" bicycle with a %s %s frame", this.getFrame().getColor(), this.getFrame().getMaterial());
    }
 }

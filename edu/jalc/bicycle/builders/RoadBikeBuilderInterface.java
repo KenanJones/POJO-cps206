@@ -5,6 +5,7 @@ import edu.jalc.bicycle.color.Color;
 
 public interface RoadBikeBuilderInterface{
   public RoadBikeBuilder withCarbonFiberFrame();
+  public RoadBikeBuilder withAluminumFrame();
   public RoadBikeBuilder withBigFrame();
   public RoadBikeBuilder withBigWheels();
   public RoadBikeBuilder with27Speeds();

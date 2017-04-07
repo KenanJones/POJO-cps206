@@ -25,4 +25,12 @@ public class Color{
    public byte getBlue(){
       return blue;
    }
+   public String toString(){
+     if(red > green && red > blue) return "Red";
+     else if(green > red && green > blue) return "Green";
+     else if(blue > red && blue > green) return "Blue";
+     else if(blue == red && red == green && green == 255) return "Black";
+     else if(blue == red && red == green && green == 0) return "White";
+     else return "Color: " + red + " " + green + " " + blue;
+   }
 }
